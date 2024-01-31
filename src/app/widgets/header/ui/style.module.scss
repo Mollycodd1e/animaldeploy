@@ -1,24 +1,5 @@
 @import '@/app/styles/color.scss';
 
-@keyframes menuOpen {
-	0% {
-		left: -300px;
-	}
-	100% {
-		left: 0;
-	}
-}
-
-@keyframes c {
-	0% {
-		left: 0;
-	}
-	100% {
-		left: -300px;
-	}
-}
-
-
 .header {
 	display: flex;
 	align-items: center;
@@ -29,23 +10,4 @@
 	margin: 0;
 	font-weight: 500;
 	color: $header;
-}
-
-.leftMenu {
-	display: none;
-	position: absolute;
-	padding: 20px;
-	width: 300px;
-	height: 100vh;
-	left: -300px;
-	top: 0;
-	background: $primary;
-	animation: menuClose 1s ease;
-	animation-fill-mode: forwards;
-}
-
-.leftMenuOpen {
-	display: block;
-	animation: menuOpen 1s ease;
-	animation-fill-mode: forwards;
 }
