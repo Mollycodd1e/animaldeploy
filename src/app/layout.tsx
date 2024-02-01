@@ -5,7 +5,7 @@ import './global.scss'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	title: 'Animals',
+	title: 'Test',
 	description: 'for pets',
 	robots: {
 		index: false,

@@ -1,10 +1,6 @@
 import s from './style.module.scss'
 
-interface IHeaderProps {
-	className?: string
-}
-
-export const Header = ({}: IHeaderProps) => {
+export const Header = ({}) => {
 
 	return (
 		<div className={s.header}>

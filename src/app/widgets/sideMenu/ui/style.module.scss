@@ -1,0 +1,58 @@
+@import './../../../styles/color';
+
+@keyframes openMenu {
+	0% {
+		width: 70px;
+	}
+
+	100% {
+		width: 300px;
+	}
+}
+
+@keyframes closeMenu {
+	0% {
+		width: 300px;
+	}
+
+	100% {
+		width: 70px;
+	}
+}
+
+.sideMenu {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 20px;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: $primary;
+}
+
+.sideMenuOpen {
+	animation: openMenu 0.7s ease;
+	animation-fill-mode: forwards;
+}
+
+.sideMenuClose {
+	animation: closeMenu 0.7s ease;
+	animation-fill-mode: forwards;
+}
+
+.list {
+	opacity: 0;
+	width: 0;
+	list-style: none;
+	padding: 0;
+	margin: 40px 0 0 0;
+}
+
+.listOpen {
+	opacity: 1;
+	width: 100%;
+	transition: opacity 1s ease;
+}

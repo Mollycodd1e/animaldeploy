@@ -1,0 +1,24 @@
+@keyframes showText {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.socials {
+	margin-top: auto;
+}
+
+.socialWrapper {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+}
+
+.socialName {
+	animation: showText 1s ease;
+	animation-fill-mode: forwards;
+}
