@@ -1,26 +1,31 @@
-import { useState } from 'react'
 import s from './style.module.scss'
 import classNames from 'classnames'
 
 interface IBurgerProps {
 	onClick: () => void
+	isOpen: boolean | null
 }
 
-export const Burger = ({ onClick }: IBurgerProps) => {
-	const [isOpen, setIsOpen] = useState<boolean>(false)
+export const Burger = ({ onClick, isOpen }: IBurgerProps) => {
+	const burderCount = [1, 2, 3]
 
 	return (
-		<div
-			className={s.menuBtn}
+		<button
+			type='button'
+			className={classNames(s.menuBtn, { [s.open]: isOpen })}
 			onClick={onClick}>
-			<button
-				type='button'
-				className={classNames(s.burgerToggle, { [s.open]: isOpen })}>
-				<div className={s.burgerTop} />
-				<div className={s.burgerMid} />
-				<div className={s.burgerBot} />
-			</button>
-		</div>
+			{burderCount.map((_, i) => {
+				return (
+					<div
+						className={classNames(
+							i === 0 ? s.burgerTop : i === 1 ? s.burgerMid : s.burgerBot,
+							{ [s.burgerOpen]: isOpen },
+							{ [s.burgerClose]: !isOpen && isOpen !== null }
+						)}
+					/>
+				)
+			})}
+		</button>
 	)
 }
 

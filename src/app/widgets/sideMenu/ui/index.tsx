@@ -21,7 +21,7 @@ export const SideMenu = ({}) => {
 				{ [s.sideMenuOpen]: isMenuOpen },
 				{ [s.sideMenuClose]: !isMenuOpen && isMenuOpen !== null }
 			)}>
-			<Burger onClick={menuToggleHandleer} />
+			<Burger onClick={menuToggleHandleer} isOpen={isMenuOpen}/>
 			<ul className={classNames(s.list, { [s.listOpen]: isMenuOpen })}>
 				<li>Приветики</li>
 				<li>Приветики</li>
