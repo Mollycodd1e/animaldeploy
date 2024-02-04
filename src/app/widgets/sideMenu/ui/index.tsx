@@ -5,11 +5,12 @@ import s from './style.module.scss'
 import { useState } from 'react'
 import { Burger } from '@/app/shared/burger'
 import { Socials } from '../../socials/ui'
+import { MenuList } from '../../menuList/menuList'
 
 export const SideMenu = ({}) => {
 	const [isMenuOpen, setIsMenuOpen] = useState<boolean | null>(null)
 
-	const menuToggleHandleer = () => {
+	const menuToggleHandler = () => {
 		if (isMenuOpen === null) setIsMenuOpen(true)
 		else setIsMenuOpen((prev) => !prev)
 	}
@@ -21,21 +22,12 @@ export const SideMenu = ({}) => {
 				{ [s.sideMenuOpen]: isMenuOpen },
 				{ [s.sideMenuClose]: !isMenuOpen && isMenuOpen !== null }
 			)}>
-			<Burger onClick={menuToggleHandleer} isOpen={isMenuOpen}/>
-			<ul className={classNames(s.list, { [s.listOpen]: isMenuOpen })}>
-				<li>Приветики</li>
-				<li>Приветики</li>
-				<li>Приветики</li>
-				<li>Приветики</li>
-				<li>Приветики</li>
-				<li>Приветики</li>
-				<li>Приветики</li>
-				<li>Приветики</li>
-				<li>Приветики</li>
-				<li>Приветики</li>
-			</ul>
+			<Burger
+				onClick={menuToggleHandler}
+				isOpen={isMenuOpen}
+			/>
+			<MenuList isOpen={isMenuOpen} />
 			<Socials isMenuOpen={isMenuOpen} />
 		</div>
 	)
 }
-

@@ -42,17 +42,3 @@
 	animation: closeMenu 0.7s ease;
 	animation-fill-mode: forwards;
 }
-
-.list {
-	opacity: 0;
-	width: 0;
-	list-style: none;
-	padding: 0;
-	margin: 40px 0 0 0;
-}
-
-.listOpen {
-	opacity: 1;
-	width: 100%;
-	transition: opacity 1s ease;
-}
