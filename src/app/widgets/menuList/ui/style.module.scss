@@ -1,0 +1,28 @@
+@import './../../../styles/color';
+
+.menuList {
+	opacity: 0;
+	width: 0;
+	list-style: none;
+	padding: 0;
+	margin: 40px 0 0 0;
+}
+
+.menuListOpen {
+	opacity: 1;
+	width: 100%;
+	transition: opacity 1s ease;
+}
+
+.menuItem {
+	& a {
+		text-decoration: none;
+		color: $text;
+	}
+}
+
+.menuActiveItem {
+	& a {
+		color: $header;
+	}
+}

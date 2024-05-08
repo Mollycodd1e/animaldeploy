@@ -1,0 +1,120 @@
+@import './../../../styles/color';
+
+@keyframes topLineOpen {
+	0% {
+		transform: rotate(0deg) translate(0, 0);
+		width: 24px;
+	}
+
+	100% {
+		transform: rotate(45deg) translate(3px, 5px);
+		width: 30px;
+	}
+}
+
+@keyframes topLineClose {
+	0% {
+		transform: rotate(45deg) translate(3px, 5px);
+		width: 30px;
+	}
+
+	100% {
+		transform: rotate(0deg) translate(0, 0);
+		width: 24px;
+	}
+}
+
+@keyframes midLineOpen {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes midLineClose {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes botLineOpen {
+	0% {
+		transform: rotate(0deg) translate(0, 0);
+		width: 24px;
+	}
+
+	100% {
+		transform: rotate(-45deg) translate(3px, -5px);
+		width: 30px;
+	}
+}
+
+@keyframes botLineClose {
+	0% {
+		transform: rotate(-45deg) translate(3px, -5px);
+		width: 30px;
+	}
+
+	100% {
+		transform: rotate(0deg) translate(0, 0);
+		width: 24px;
+	}
+}
+
+.menuBtn {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	margin: 0;
+	gap: 4px;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+}
+
+:is(.burgerTop, .burgerMid, .burgerBot) {
+	width: 24px;
+	height: 2px;
+	background-color: $header;
+}
+
+.burgerTop.burgerClose {
+	animation: topLineClose 1s ease;
+}
+
+.burgerMid.burgerClose {
+	animation: midLineClose 0.7s ease;
+}
+
+.burgerBot.burgerClose {
+	animation: botLineClose 1s ease;
+}
+
+.burgerTop.burgerOpen {
+	animation: topLineOpen 1s ease;
+}
+
+.burgerMid.burgerOpen {
+	animation: midLineOpen 0.3s ease;
+}
+
+.burgerBot.burgerOpen {
+	animation: botLineOpen 1s ease;
+}
+
+:is(.burgerTop, .burgerMid, .burgerBot):is(.burgerOpen, .burgerClose) {
+	animation-fill-mode: forwards;
+}

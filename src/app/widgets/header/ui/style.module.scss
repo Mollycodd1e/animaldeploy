@@ -1,0 +1,13 @@
+@import '@/app/styles/color.scss';
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header h2 {
+	margin: 0;
+	font-weight: 500;
+	color: $header;
+}
