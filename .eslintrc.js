@@ -9,7 +9,6 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react/recommended',
 		'plugin:i18next/recommended',
-		'plugin:storybook/recommended',
 	],
 	overrides: [
 		{
