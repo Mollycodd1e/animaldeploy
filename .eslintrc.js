@@ -38,7 +38,7 @@ module.exports = {
 		'react/jsx-indent': ['error', 'tab'],
 		'react/jsx-indent-props': ['error', 'tab'],
 		indent: ['error', 'tab'],
-		'linebreak-style': ['error', 'windows'],
+		// 'linebreak-style': ['error', 'windows'],
 		quotes: ['error', 'single'],
 		semi: ['error', 'never'],
 		'import/no-unresolved': 'off',
