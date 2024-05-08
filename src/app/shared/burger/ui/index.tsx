@@ -17,6 +17,7 @@ export const Burger = ({ onClick, isOpen }: IBurgerProps) => {
 			{burderCount.map((_, i) => {
 				return (
 					<div
+						key={i}
 						className={classNames(
 							i === 0 ? s.burgerTop : i === 1 ? s.burgerMid : s.burgerBot,
 							{ [s.burgerOpen]: isOpen },
@@ -28,4 +29,3 @@ export const Burger = ({ onClick, isOpen }: IBurgerProps) => {
 		</button>
 	)
 }
-

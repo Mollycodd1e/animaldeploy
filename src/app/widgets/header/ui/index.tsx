@@ -10,7 +10,7 @@ interface IHeaderProps {
 }
 
 export const Header = ({ content }: IHeaderProps) => {
-	const { title, description, image } = content
+	const { title, image } = content
 
 	return (
 		<div className={s.header}>

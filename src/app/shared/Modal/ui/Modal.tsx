@@ -27,11 +27,13 @@ export const Modal = ({ className, children, isOpen, setIsOpen }: IModalProps) =
 
 	useEffect(() => {
 		if (isOpen) {
-			window.addEventListener('keydown', (e) => onKeyDown(e as any))
+			window.addEventListener('keydown', (e) => onKeyDown(e as unknown as KeyboardEvent<Element>))
 		}
 
 		return () => {
-			window.removeEventListener('keydown', (e) => onKeyDown(e as any))
+			window.removeEventListener('keydown', (e) =>
+				onKeyDown(e as unknown as KeyboardEvent<Element>)
+			)
 		}
 	}, [isOpen])
 
