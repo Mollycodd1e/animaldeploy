@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
-import { Database } from './supabase'
+import { Database } from './supabase.intarface'
 
 const supabaseURL = 'https://umekwzpqnmixqkxyclly.supabase.co'
 const supabasePunlicKey =
@@ -7,13 +7,6 @@ const supabasePunlicKey =
 	'I6InVtZWt3enBxbm1peHFreHljbGx5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUxNjYxNz' +
 	'gsImV4cCI6MjAzMDc0MjE3OH0.q98hi8mNNMdihhXf8_c46Nb4-GL5rfkQJICz' +
 	'OVPLj1M'
-
-interface IClientDataProps {
-	id: string
-	created_at: string
-	author: string | null
-	news: string | null
-}
 
 const supabaseData = createClient<Database>(supabaseURL, supabasePunlicKey)
 

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { SideMenu } from './widgets/sideMenu/ui'
 import s from './layout.module.scss'
 import './global.scss'
+import SupabaseProvider from './providers/supabaseProvider/supabaseProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,12 +30,13 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode
 }>) {
-	
 	return (
 		<html lang='ru'>
 			<body className={inter.className}>
-				<SideMenu />
-				<div className={s.contentWrapper}>{children}</div>
+				<SupabaseProvider>
+					<SideMenu />
+					<div className={s.contentWrapper}>{children}</div>
+				</SupabaseProvider>
 			</body>
 		</html>
 	)
