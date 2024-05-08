@@ -1,11 +1,21 @@
 import { Button } from '@/app/shared/ui/button/ui'
 import s from './style.module.scss'
 
-export const Header = ({}) => {
+interface IHeaderProps {
+	content: {
+		title: string
+		description: string
+		image: string
+	}
+}
+
+export const Header = ({ content }: IHeaderProps) => {
+	const { title, description, image } = content
+
 	return (
 		<div className={s.header}>
-			<div>Картинка</div>
-			<h2>Title</h2>
+			<div>{image}</div>
+			<h2>{title}</h2>
 			<Button text={'Войти'} />
 		</div>
 	)
