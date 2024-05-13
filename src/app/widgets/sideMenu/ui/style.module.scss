@@ -26,11 +26,17 @@
 	flex-direction: column;
 	overflow: hidden;
 	padding: 20px;
-	height: 100dvh;
+	height: 100vh;
 	top: 0;
 	left: 0;
 	z-index: 10;
 	background: $primary;
+}
+
+@supports (height: 100dvh) {
+	.sideMenu {
+		height: 100dvh;
+	}
 }
 
 .sideMenuOpen {
